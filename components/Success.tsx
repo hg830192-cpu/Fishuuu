@@ -13,7 +13,7 @@ export const Success: React.FC<SuccessProps> = ({ onUnlock }) => {
 
   const handleAnswer = () => {
     setAnswered(true);
-  }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-6 z-10 relative overflow-hidden">
@@ -32,12 +32,13 @@ export const Success: React.FC<SuccessProps> = ({ onUnlock }) => {
           I knew you loved me! 💖
         </p>
 
+        {/* Your Photo */}
         <motion.img 
-            src="https://media.tenor.com/uD_3t3hZJuwAAAAi/cute-bear.gif" 
-            alt="Happy Dance"
-            className="w-48 h-48 mx-auto rounded-3xl shadow-xl mb-6 border-4 border-pink-200"
-            initial={{ y: 20 }}
-            animate={{ y: 0 }}
+          src="/my-love.png"
+          alt="The man who loves you forever ❤️"
+          className="w-48 h-48 mx-auto rounded-3xl object-cover shadow-xl mb-6 border-4 border-pink-200"
+          initial={{ y: 20 }}
+          animate={{ y: 0 }}
         />
 
         {!answered ? (
@@ -48,13 +49,32 @@ export const Success: React.FC<SuccessProps> = ({ onUnlock }) => {
             className="mt-6"
           >
             <p className="text-xl text-gray-700 font-quicksand mb-4 font-bold">
-              One tiny question before your surprise... <br/>
-              Who loves Fishuu the most in the universe? 🌎
+              One tiny question before your surprise... 💖<br/>
+              Who will love Fishuu endlessly, protect her smile, 
+              and spend his life trying to be the best man for her? 🌍✨
             </p>
+
             <div className="flex flex-wrap gap-4 justify-center">
-               <button onClick={handleAnswer} className="bg-pink-100 hover:bg-pink-200 text-pink-600 px-6 py-3 rounded-full font-bold transition-all">My Family</button>
-               <button onClick={handleAnswer} className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-bold shadow-lg transform hover:scale-105 transition-all text-xl">YOU! (My BF) 💖</button>
-               <button onClick={handleAnswer} className="bg-pink-100 hover:bg-pink-200 text-pink-600 px-6 py-3 rounded-full font-bold transition-all">My Friends</button>
+              <button 
+                onClick={handleAnswer} 
+                className="bg-pink-100 hover:bg-pink-200 text-pink-600 px-6 py-3 rounded-full font-bold transition-all"
+              >
+                Her Future Husband 😌💍
+              </button>
+
+              <button 
+                onClick={handleAnswer} 
+                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-bold shadow-lg transform hover:scale-105 transition-all text-xl"
+              >
+                The Man Who Loves Her Forever 💖
+              </button>
+
+              <button 
+                onClick={handleAnswer} 
+                className="bg-pink-100 hover:bg-pink-200 text-pink-600 px-6 py-3 rounded-full font-bold transition-all"
+              >
+                Her Personal Superhero 🦸‍♂️✨
+              </button>
             </div>
           </motion.div>
         ) : (
@@ -62,15 +82,17 @@ export const Success: React.FC<SuccessProps> = ({ onUnlock }) => {
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
           >
-             <p className="text-2xl text-green-600 font-bold mb-6 font-pacifico">Correct! I love you infinity! ♾️</p>
-             <motion.button
-                onClick={onUnlock}
-                className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg text-xl animate-bounce"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                🎁 Unlock Tomorrow's Surprise
-              </motion.button>
+            <p className="text-2xl text-green-600 font-bold mb-6 font-pacifico">
+              Correct! I promise to love you, protect your smile, and be the best man for you — always and forever. ♾️💖
+            </p>
+            <motion.button
+              onClick={onUnlock}
+              className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg text-xl animate-bounce"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              🎁 Unlock Tomorrow's Surprise
+            </motion.button>
           </motion.div>
         )}
       </motion.div>
