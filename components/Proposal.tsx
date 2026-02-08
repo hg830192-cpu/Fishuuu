@@ -27,7 +27,7 @@ export const Proposal: React.FC<ProposalProps> = ({ onYes }) => {
       >
         <div className="mb-6">
           <img 
-            src="https://media.tenor.com/BMTXJjNnE9kAAAAi/cute-love.gif" 
+            src="/proposal.png" 
             alt="Cute Proposal" 
             className="w-48 h-48 mx-auto rounded-2xl object-cover shadow-lg"
           />
