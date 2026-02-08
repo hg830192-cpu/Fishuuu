@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
-import myLove from './my-love.png';   // 👈 ADD THIS
+import myLove from '../components/my-love.png';   // 👈 ADD THIS
 
 interface SuccessProps {
   onUnlock: () => void;
@@ -35,12 +35,12 @@ export const Success: React.FC<SuccessProps> = ({ onUnlock }) => {
 
         {/* Your Photo */}
         <motion.img 
-          src={myLove}   // 👈 FIXED
-          alt="The man who loves you forever ❤️"
-          className="w-48 h-48 mx-auto rounded-3xl object-cover shadow-xl mb-6 border-4 border-pink-200"
-          initial={{ y: 20 }}
-          animate={{ y: 0 }}
-        />
+  src={my-love}
+  alt="The man who loves you forever ❤️"
+  className="w-48 h-48 mx-auto rounded-3xl object-cover shadow-xl mb-6 border-4 border-pink-200"
+  initial={{ y: 20 }}
+  animate={{ y: 0 }}
+/>
 
         {!answered ? (
           <motion.div
