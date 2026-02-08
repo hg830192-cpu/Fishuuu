@@ -35,7 +35,7 @@ export const CupidGen: React.FC<CupidGenProps> = ({ onNext }) => {
            >
               {/* Cute Baby/Angel GIF */}
               <img 
-                src="https://media.tenor.com/On7kV2xO3XsAAAAi/baby-love.gif" 
+                src="/cupid.gif" 
                 alt="Cute Baby Angel"
                 className="w-full h-full object-cover"
               />
